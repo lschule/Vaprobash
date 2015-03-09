@@ -54,7 +54,9 @@ cat <<- _EOF_
         Options -Indexes +FollowSymLinks +MultiViews
         AllowOverride All
         Require all granted
-
+	    AddHandler mod_python .py
+	    PythonHandler mod_python.publisher
+	    PythonDebug On
         <FilesMatch \.php$>
             # Change this "proxy:unix:/path/to/fpm.socket"
             # if using a Unix socket
