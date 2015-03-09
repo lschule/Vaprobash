@@ -39,6 +39,9 @@ exit 1
 #
 function create_vhost {
 cat <<- _EOF_
+<Proxy fcgi://127.0.0.1:7000>
+    ProxySet timeout=3600
+</Proxy>
 <VirtualHost *:80>
     ServerAdmin webmaster@localhost
     ServerName $ServerName
