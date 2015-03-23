@@ -10,8 +10,6 @@ sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite
 sudo apt-get install python-pip
 sudo pip install crm114
 
-sudo apt-get install libapache2-mod-python
-
 echo ">>> running ansible setup"
 
 sudo ansible-galaxy install -r requirements.txt
