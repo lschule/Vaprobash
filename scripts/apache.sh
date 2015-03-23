@@ -40,7 +40,7 @@ sudo apt-get update
 # -qq implies -y --force-yes
 sudo apt-get install -qq apache2 apache2-mpm-event
 # Install python for apache
-sudo apt-get install libapache2-mod-python
+sudo apt-get install -qq libapache2-mod-python
 
 
 echo ">>> Configuring Apache"
