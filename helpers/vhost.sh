@@ -47,10 +47,10 @@ cat <<- _EOF_
     ServerName $ServerName
     $ServerAlias
 
-    DocumentRoot $DocumentRoot
+    DocumentRoot $DocumentRoot/web
 
 
-    <Directory $DocumentRoot>
+    <Directory $DocumentRoot/web>
         Options -Indexes +FollowSymLinks +MultiViews
         AllowOverride All
         Require all granted
