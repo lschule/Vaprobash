@@ -16,3 +16,5 @@ echo ">>> running ansible setup"
 
 sudo ansible-galaxy install -r requirements.txt
 sudo ansible-playbook provisioning/playbook.yml
+
+sudo service apache2 restart

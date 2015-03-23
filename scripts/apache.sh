@@ -39,6 +39,9 @@ sudo apt-get update
 # Install Apache
 # -qq implies -y --force-yes
 sudo apt-get install -qq apache2 apache2-mpm-event
+# Install python for apache
+sudo apt-get install libapache2-mod-python
+
 
 echo ">>> Configuring Apache"
 
@@ -69,5 +72,3 @@ else
     # If PHP is not installed, we'll comment it out
     sudo sed -i "s@ProxyPassMatch@#ProxyPassMatch@" /etc/apache2/sites-available/$1.xip.io.conf
 fi
-
-sudo service apache2 restart
